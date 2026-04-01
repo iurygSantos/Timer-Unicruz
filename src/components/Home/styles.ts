@@ -4,14 +4,15 @@ export const HomeContainer = styled.main`
     display: flex;
     flex: 1;
     flex-direction: column;
-    align-itens: center;
+    align-items: center;
     justify-content: center;
-    
+    margin-bottom: 5rem;
+
     form
     {
         display: flex;
         flex-direction: column;
-        align-itens: center;
+        align-items: center;
         gap: 3.5rem;
         
     }
@@ -20,10 +21,10 @@ export const HomeContainer = styled.main`
 export const FormContainer = styled.div`
     width: 100%;
     display: flex;
-    align-itens: center;
+    align-items: center;
     gap: 0.5rem;
     color: ${(props) => props.theme['gray-100']};
-    font-size: 1.125rem;
+    font-size: 1.120rem;
     font-weight: bold;
     flex-wrap: wrap;
 `
@@ -32,7 +33,8 @@ export const FormContainer = styled.div`
 export const CountdownContainer = styled.div`
     font-family: 'Roboto Mono', monospace;
     font-size: 10rem;
-    line-height: 80%;
+    font-weight: bold;
+    line-heigth: 80%;
     color: ${(props) => props.theme['gray-100']};
 
     display: flex;
@@ -46,14 +48,14 @@ export const CountdownContainer = styled.div`
 `
 
 export const Separator = styled.div`
-    padding: 16px 10px 16px 0;
     color: ${(props) => props.theme['green-500']};
 
     width: 4rem;
     overflow: hidden;
     display: flex;
     justify-content: center;
-
+    font-size: 14rem;
+    font-weight: bold;
 `
 
 export const StartContdownButton = styled.button`
@@ -92,7 +94,7 @@ const baseInput = styled.input
     border: 0;
     border-bottom: 2px solid ${(props) => props.theme['gray-500']};
     font-weight: bold;
-    font-size: 1.125rem;
+    font-size: 1.120rem;
     padding: 0 0.5rem; 
     color:  ${(props) => props.theme['gray-100']};
 

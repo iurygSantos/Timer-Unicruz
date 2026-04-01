@@ -5,7 +5,8 @@ export const HeaderContainer = styled.div`
     align-items: center;
     justify-content: space-between;
     height: 3rem;
-    margin-top: 48px;
+    margin-top: 30px;
+    margin-bottom: 30px;
 
     
     img {

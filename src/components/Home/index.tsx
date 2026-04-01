@@ -1,0 +1,39 @@
+import { PlayIcon } from "@phosphor-icons/react";
+import { HomeContainer, FormContainer, CountdownContainer, Separator, StartContdownButton, TaskInput, MinutesAmountInput } from "./styles";
+
+export function Home() {
+    return (
+        <HomeContainer>
+            <form>
+                <FormContainer>
+                    <label htmlFor="task"> Vou trabalhar em </label>
+                    <TaskInput id="task" type="text" placeholder="De um nome para seu projeto" list="task-suggestions" />
+
+                    <datalist id="task-suggestions">
+                        <option value="Projeto 1"></option>
+                        <option value="Projeto 2"></option>
+                        <option value="Projeto 3"></option>
+                        <option value="Projeto 4"></option>
+                    </datalist>
+
+                    <label htmlFor="minutesAmount"> durante </label>
+                    <MinutesAmountInput id="minutesAmount" type="number" placeholder="00" step={5} min={0} max={59} />
+
+                    <span> minutos. </span>
+                </FormContainer>
+
+                <CountdownContainer>
+                    <span>0</span>
+                    <span>0</span>
+                    <Separator>:</Separator>
+                    <span>0</span>
+                    <span>0</span>
+                </CountdownContainer>
+
+                <StartContdownButton type="submit" disabled>
+                    <PlayIcon size={24} /> Começar
+                </StartContdownButton>
+            </form>
+        </HomeContainer>
+    )
+}

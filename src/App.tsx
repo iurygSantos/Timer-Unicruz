@@ -8,11 +8,10 @@ import { GlobalStyle } from './styles/global'
 import { Button } from './components/Button'
 import { Router } from './Router'
 
-export function App() 
-{
+export function App() {
   return (
     <BrowserRouter>
-      <ThemeProvider theme ={ defaultTheme }>
+      <ThemeProvider theme={defaultTheme}>
         <Router />
 
         <GlobalStyle />

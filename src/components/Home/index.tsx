@@ -1,6 +1,7 @@
-import { PlayIcon } from "@phosphor-icons/react";
-import { HomeContainer, FormContainer, CountdownContainer, Separator, StartContdownButton, TaskInput, MinutesAmountInput, MinutesInputContainer, ControlButton, Warning, ContainerWarning } from "./styles";
+import { HomeContainer, FormContainer, CountdownContainer, Separator, StartContdownButton, TaskInput, MinutesAmountInput, MinutesInputContainer, ControlButton, Warning, ContainerWarning, ButtonStop } from "./styles";
+import { HandWavingIcon, PlayIcon } from "@phosphor-icons/react";
 import { useState } from "react";
+
 
 export function Home() {
     const [minutes, setMinutes] = useState(0);
@@ -118,9 +119,9 @@ export function Home() {
                             <PlayIcon size={24} /> Começar
                         </StartContdownButton>
                     ) : (
-                        <StartContdownButton type="button" onClick={handleStopCycle}>
-                            Parar
-                        </StartContdownButton>
+                        <ButtonStop type="button" onClick={handleStopCycle}>
+                            <HandWavingIcon size={24} /> Parar
+                        </ButtonStop>
                     )}
                 </ContainerWarning>
             </form>
